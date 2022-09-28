@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - SSRDS Bank</title>
+
 </head>
+
 <body>
-    <header class="header">
-        <navbar>
-        <div class="topnav">
-            <a class="imgLogo" href="accountSummary.html"><img src="img/logo.png"></a>
-            <a class="nameDiv"> The bank which you can trust </a>
-            <a class="" href="product_1.php">Phones</a>
-            <a  href="product_2.php">Watches</a>
-            <a  href="product_3.php">Tabs </a>
-            <a class="logout" href="js/logout.js">Logout </a>
-        
-          </div>
-        </navbar>
-    </header>
     <main>
-        <!-- DO EVERYTHING HERE -->
-        <h1>
-            
-             
-        </h1>
+        <!--Bank name and logo-->
+        <div>
+            <h1>
+                <a class="imgLogo"><img src="img/logo.png"></a>
+                SSRDS Bank
+            </h1>
+        </div>
+        <!--Welcome messsage according to time-->
+        <div>
+            <hr>
+            <h3 id="wlcmMsg"></h3>
+            <hr>
+        </div>
+        <div>
+            <form action="mobile.php" method="GET" id="loginForm">
+                <label for="username" class="loginLabel">Username</label>
+                <br>
+                <input type="text" name="name" class="username">
+                <br>
+                <label for="password" class="loginLabel">Password</label>
+                <br>
+                <input type="password" name="password" class="password">
+                <br>
+                <input type="submit" value="Submit" class="loginSubmit">
+            </form>
+        </div>
     </main>
-    
+
     <footer class="content-footer">
-        <p>Say Hi to me on these social networks:</p>
-       <ul class="social">
-        <li><a href="https://github.com/shivam1709"><img class="github"  src="github.png" alt="gh"></a></li>
-         <li><a href="https://www.instagram.com/shivam.hingu/"><img class="instagram"  src="instagram.png" alt="insta"></a></li>
-        <li><a href="https://www.facebook.com/shivamhingu/"><img class="facebook"  src="facebook.png" alt="fb"></a></li>
-        </ul> 
+        <p>Follow SSRDS on social media:</p>
+        <ul class="social">
+            <li>
+                <a href="https://github.com/shivam1709"><img class="github" src="github.png" alt="gh"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/shivam.hingu/"><img class="instagram" src="instagram.png" alt="insta"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/shivamhingu/"><img class="facebook" src="facebook.png" alt="fb"></a>
+            </li>
+        </ul>
         <h1 class="copyright">Copyright &copy; Shivam Hingu</h1>
     </footer>
+    <script src="./js/login.js"></script>
 </body>
+
 </html>
