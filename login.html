@@ -25,14 +25,15 @@
             <hr>
         </div>
         <div>
-            <form action="mobile.php" method="GET" id="loginForm">
+            <form action="accountSummary.html" onsubmit="return formValidation()" method="GET" id="loginForm">
+                <p id="errorMsg"></p>
                 <label for="username" class="loginLabel">Username</label>
                 <br>
-                <input type="text" name="name" class="username">
+                <input type="text" name="name" id="userName" class="username">
                 <br>
                 <label for="password" class="loginLabel">Password</label>
                 <br>
-                <input type="password" name="password" class="password">
+                <input type="password" name="password" id="password" class="password">
                 <br>
                 <input type="submit" value="Submit" class="loginSubmit">
             </form>
