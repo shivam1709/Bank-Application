@@ -22,19 +22,19 @@ function formValidation() {
                     sessionStorage.setItem("loggedIn", 1);
                     return true;
                 } else {
-                    document.getElementById("errorMsg").innerHTML = "Incorrect password! Please, try again."
+                    document.getElementById("errorMsg").innerHTML = "Failed attempt! Incorrect password!"
                     return false;
                 }
             } else {
-                document.getElementById("errorMsg").innerHTML = "Incorrect username! Please, try again."
+                document.getElementById("errorMsg").innerHTML = "Failed attempt! Incorrect username!"
                 return false;
             }
         } else {
-            document.getElementById("errorMsg").innerHTML = "Password cannot be empty!";
+            document.getElementById("errorMsg").innerHTML = "Failed attempt! Password cannot be empty!";
             return false;
         }
     } else {
-        document.getElementById("errorMsg").innerHTML = "Username cannot be empty!";
+        document.getElementById("errorMsg").innerHTML = "Failed attempt! Username cannot be empty!";
         return false;
     }
 }
