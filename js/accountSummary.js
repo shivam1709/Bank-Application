@@ -1,5 +1,5 @@
 if (sessionStorage.getItem("loggedIn") == 1) {
-    sessionStorage.setItem("user", "User1223");
+    sessionStorage.setItem("user", "user123");
     document.getElementById("user").innerHTML = sessionStorage.getItem("user");
 } else {
     window.location.replace("login.html")
