@@ -4,7 +4,7 @@ if (sessionStorage.getItem("loggedIn") == 1) {
 } else {
     window.location.replace("login.html")
 }
-
+document.getElementById("defaultAccount").click();
 function accountInfo(evt, accountType) {
     var i, type, links;
   
