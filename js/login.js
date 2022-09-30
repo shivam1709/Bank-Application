@@ -15,21 +15,12 @@ if (date.getHours() < 12) {
 
 //javascript for login
 function formValidation() {
-
-    if (document.getElementById("userName").value != "") {
-        if (document.getElementById("password").value != "") {
-            if (document.getElementById("userName").value == "user123") {
-                if (document.getElementById("password").value == "user123") {
-                    sessionStorage.setItem("loggedIn", 1);
-                    return true;
-                } else {
-                    document.getElementById("errorMsg").innerHTML = "Failed attempt! Incorrect password!"
-                    return false;
-                }
-            } else {
-                document.getElementById("errorMsg").innerHTML = "Failed attempt! Incorrect username!"
-                return false;
-            }
+  if (document.getElementById("userName").value != "") {
+    if (document.getElementById("password").value != "") {
+      if (document.getElementById("userName").value == "user123") {
+        if (document.getElementById("password").value == "user123") {
+          sessionStorage.setItem("loggedIn", 1);
+          return true;
         } else {
           document.getElementById("errorMsg").innerHTML =
             "Failed attempt! Incorrect password!";
