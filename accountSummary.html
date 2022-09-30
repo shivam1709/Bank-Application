@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/accountSummary.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,15 +17,73 @@
             <a class="" href="accountSummary.html">Account Summary</a>
             <a  href="customerInfo.html">Customer Information</a>
             <a  href="interac.html">Interac-e Transfer </a>
-            <a class="logout" href="js/logout.js">Logout </a>
+            <p id="user"></p>
+            <a class="logout" href="logout.html">Logout </a>
+
         
           </div>
         </navbar>
     </header>
-    <main>
-        <!-- DO EVERYTHING HERE -->
+   <main>
+        <div class="navTab">
+            <button class="links" onclick="accountInfo(event, 'Chequing')">Chequing</button>
+            <button class="links" onclick="accountInfo(event, 'Saving')">Saving</button>
+        </div>
+        <div id="Chequing" class="type">
+            <h1>Account Balance</h1>
+            <h3>$5000</h3>
+            <div class="transactionHistory">
+                <p>Grocery</p>
+                <p class="minus"> $100</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Income</p>
+                <p class="plus"> $2500</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Movie</p>
+                <p class="minus"> $50</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Outside Food</p>
+                <p class="minus"> $200</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Rent</p>
+                <p class="minus"> $700</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Phone Bill</p>
+                <p class="minus"> $130</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Utility</p>
+                <p class="minus"> $50</p>
+            </div>
+
+        </div>
+        <div id="Saving" class="type">
+            <h1>Account Balance</h1>
+            <h3>$1070</h3>
+            <div class="transactionHistory">
+                <p>Investment</p>
+                <p class="minus"> $200</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Investment</p>
+                <p class="minus"> $700</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Investment</p>
+                <p class="minus"> $130</p>
+            </div>
+            <div class="transactionHistory">
+                <p>Investment</p>
+                <p class="minus"> $50</p>
+            </div>
+        </div>   
+
     </main>
-    
     <footer class="content-footer">
         <p>Say Hi to me on these social networks:</p>
        <ul class="social">
