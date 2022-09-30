@@ -1,12 +1,12 @@
 body {
-    background-color: #fff;
+  width: 99%;
+  margin: auto;
+    background-color: #faf4e2;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
  .imgLogo{
-  display: block;
-  margin-left: 0px;
-  margin-right: 0px;
-  align-items: center;
+  text-align: center;
+  margin: auto;
   width: 20px;
  }
   .logo h1 {
@@ -21,8 +21,8 @@ body {
 
   }
   .login-box{
-    width: 360px;
-    height:290px;
+    width: 370px;
+    height:300px;
     margin: auto;
     padding: auto;
     border-radius: 4px;
@@ -36,6 +36,52 @@ body {
     margin: 20px;
     padding: 2%;
 
+  }
+.topnav{
+  margin: auto;
+}
+.nameDiv{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  text-align: center;
+}
+  .topnav .logo a img{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+  }
+  .topnav .imgLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+  }
+  .infoClass{
+    text-align: center;
+  }
+  .headerDetails{
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 7px;
+    
+  }
+
+  .headerDetails a{
+    display: inline;
+    margin-top:5px ;
+    margin-left: 10px;
+    padding: 9px;
+    background-color: #548C2F;
+    color: #e9ebc0;
+    text-decoration: none;
+  }
+  .logoutLink{
+    text-align: right;
   }
   form h2{
     text-align: center;
@@ -67,24 +113,27 @@ body {
     color: white;
     font-size: 20px;
   }
+  #errorMsg{
+    color: red;
+  }
 
   .navTab {
     overflow: hidden;
-    border: 1px solid lightskyblue;
-    background-color: lightblue;
+    border: 1px solid #F9A620;
+    background-color:#AAB03C;
   }
     .type {
         display: none;
         padding: 6px 12px;
-        border: 1px solid lightskyblue;
+        border: 1px solid #548C2F;
         border-top: none;
       }
       .navTab button:hover {
-        background-color: lightskyblue;
+        background-color: #548C2F;
       }
       
       .navTab button.active {
-        background-color: lightskyblue;
+        background-color: #548C2F;
       }
   .navTab button {
     background-color: inherit;
@@ -109,7 +158,42 @@ body {
   .minus{
     color: red;
   }
+.interact{
+  width: 370px;
+  height:500px;
+  margin: auto;
+  padding: auto;
+  border-radius: 4px;
+  background-color:#F9A620;
 
+}
+#Validation{
+  width:300px;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  background-color:#548C2F;
+  color: white;
+  font-size: 20px;
+}
+form h2{
+  text-align: center;
+}
+
+form input{
+  width:100%;
+  margin: 10px;
+  padding:7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 7px;
+  outline:none ;
+
+}
+
+.custinfo{
+  text-align: center;
+}
   footer{
     position: absolute;
     left: 0;
@@ -131,34 +215,45 @@ body {
 
   }
 
-  .socials{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .socials li{
-    margin: 0 10px;
-
-  }
-  .socials a{
-    text-decoration: none;
-    color: #fff;
-  }
-  .socials a img{
-    font-size: 1.1rem;
-    transition: color ,4s ease;
-  }
-
-  .socials a:hover i{
-    color: rgb(175, 6, 6);
-  }
   .footer-bottom{
     background: #104911;
-    height: 50px;
-    width: 100vw;
-    
+    height: 70px;
     text-align: center;
     font-size: small;
   }
+.footerDiv{
+  margin-bottom: 50px;
+}
+.brb {
+  border: 2px solid #e39009;
+  background-color: #e9ebc0;
+}
+  .accountAmount{
+    padding: 0 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .socials > li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .github{
+      height: 35px;
+      width: 35px;
+      object-fit: cover;
+      padding-right: 2px;
+  }
+  .instagram{
+    height: 33px;
+    width: 33px;
+    object-fit: cover;
+    padding-right: 2px;
+}
+.facebook{
+    height: 33px;
+    width: 33px;
+    object-fit: cover;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./js/interac.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
   </head>
   <body>
@@ -12,27 +12,29 @@
       <navbar>
         <div class="topnav">
           <a class="imgLogo" href="accountSummary.html"
-            ><img src="img/logo.png"
+            ><img src="img/logo.png"width="150px" height="150px"
           /></a>
-          <a class="nameDiv"> The bank which you can trust </a>
+          <a class="nameDiv"> The bank which you can trust </a><br>
+          <div class="headerDetails">
           <a class="" href="accountSummary.html">Account Summary</a>
           <a href="customerInfo.html">Customer Information</a>
           <a href="interac.html">Interac-e Transfer </a>
-          <a class="logout" href="logout.html">Logout </a>
+          <a href="logout.html">Logout </a>
+          </div>
         </div>
       </navbar>
     </header>
     <main>
       <!-- DO EVERYTHING HERE -->
-      <h2 id="user">UserName</h2>
-      <header>
-        <button>Logout</button>
-      </header>
-      <h1>Checking Account</h1>
-      <h3>$5000</h3>
+      <h2 id="user"></h2>
+      <div class="accountAmount">
+        <h1>Checking Account</h1>
+        <h3>$5000</h3>
+      </div>
+      <div class="interact">
 
       <form action="/action_page.php">
-        <label for="pname">Payee name:</label><br />
+        <label for="pname">Pay name:</label><br />
         <input type="text" id="pname" name="fname" value="" /><br />
         <label for="email">Enter your email:</label><br />
         <input type="email" id="email" name="email" /><br />
@@ -50,15 +52,17 @@
         <input type="text" id="pname" name="fname" value="" /><br />
         <label for="amount">Amount:</label><br />
         <input type="number" id="amount" name="" value="" /><br />
-      </form>
+      
       <button id="Validation" onclick="return moneyValidation()">
         Send Money
       </button>
+      </form>
+      </div>
     </main>
-
-    <footer class="content-footer">
+<br>
+    <footer class="footer-content">
       <p>Say Hi to me on these social networks:</p>
-      <ul class="social">
+      <ul class="socials">
         <li>
           <a href=""><img class="github" src="github.png" alt="gh" /></a>
         </li>
@@ -71,7 +75,9 @@
           <a href="/"><img class="facebook" src="facebook.png" alt="fb" /></a>
         </li>
       </ul>
-      <h1 class="copyright">Copyright &copy; SSRDS Bank</h1>
+      <h1 class="footer-bottom">Copyright &copy; SSRDS Bank</h1>
     </footer>
+    
+    <script src="./js/interac.js"></script>
   </body>
 </html>

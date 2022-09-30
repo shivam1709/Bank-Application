@@ -10,17 +10,26 @@
 </head>
 <body>
     <header class="header">
-        <navbar>
         <div class="topnav">
-            <a class="imgLogo" href="accountSummary.html"><img src="img/logo.png"></a>
-            <a class="nameDiv"> The bank which you can trust </a>
-            <a class="" href="accountSummary.html">Account Summary</a>
-            <a  href="customerInfo.html">Customer Information</a>
-            <a  href="interac.html">Interac-e Transfer </a>
-            <p id="user"></p>
-            <a class="logout" href="logout.html">Logout </a>
-          </div>
-        </navbar>
+            <div class="logo">
+                <br>
+                <a class="imgLogo" href="accountSummary.html">
+                    <img src="img/logo.png" width="150px" height="150px"></a>
+                    <br>
+            </div>
+            <a class="nameDiv"> "The bank which you can trust" </a>
+            <br>
+            <div class="headerDetails">
+                <a  href="accountSummary.html">Account Summary</a>
+                <a  href="customerInfo.html">Customer Information</a>
+                <a  href="interac.html">Interac-e Transfer </a>
+                <a  href="logout.html">Logout </a>
+            </div>
+            <div class="logoutLink">
+                <p id="user"></p>
+               
+            </div>
+        </div>
     </header>
    <main>
         <div class="navTab">
@@ -28,41 +37,55 @@
             <button class="links" onclick="accountInfo(event, 'Saving')">Saving</button>
         </div>
         <div id="Chequing" class="type">
-            <h1>Account Balance</h1>
-            <h3>$5000</h3>
-            <div class="transactionHistory">
-                <p>Grocery</p>
-                <p class="minus"> $100</p>
+            <div class="accountAmount">
+                <div>
+                    <h1>Account Balance</h1>
+                </div>
+                <div>
+                    <h1>$5000</h1>
+                </div>
+             </div>
+            
+            
+            <div class="brb">
+                <div class="transactionHistory">
+                    <p>Grocery</p>
+                    <p class="minus"> $100</p>
+                </div>
+                <div class="transactionHistory">
+                    <p>Income</p>
+                    <p class="plus"> $2500</p>
+                </div>
+                <div class="transactionHistory">
+                    <p>Movie</p>
+                    <p class="minus"> $50</p>
+                </div>
+                <div class="transactionHistory">
+                    <p>Outside Food</p>
+                    <p class="minus"> $200</p>
+                </div>
+                <div class="transactionHistory">
+                    <p>Rent</p>
+                    <p class="minus"> $700</p>
+                </div>
+                <div class="transactionHistory">
+                    <p>Phone Bill</p>
+                    <p class="minus"> $130</p>
+                </div>
+                <div class="transactionHistory">
+                    <p>Utility</p>
+                    <p class="minus"> $50</p>
+                </div>
             </div>
-            <div class="transactionHistory">
-                <p>Income</p>
-                <p class="plus"> $2500</p>
-            </div>
-            <div class="transactionHistory">
-                <p>Movie</p>
-                <p class="minus"> $50</p>
-            </div>
-            <div class="transactionHistory">
-                <p>Outside Food</p>
-                <p class="minus"> $200</p>
-            </div>
-            <div class="transactionHistory">
-                <p>Rent</p>
-                <p class="minus"> $700</p>
-            </div>
-            <div class="transactionHistory">
-                <p>Phone Bill</p>
-                <p class="minus"> $130</p>
-            </div>
-            <div class="transactionHistory">
-                <p>Utility</p>
-                <p class="minus"> $50</p>
-            </div>
+            
 
         </div>
         <div id="Saving" class="type">
+            <div class="accountAmount">
             <h1>Account Balance</h1>
             <h3>$1070</h3>
+            </div>
+            <div class="brb">
             <div class="transactionHistory">
                 <p>Investment</p>
                 <p class="minus"> $200</p>
@@ -78,18 +101,19 @@
             <div class="transactionHistory">
                 <p>Investment</p>
                 <p class="minus"> $50</p>
+            </div>
             </div>
         </div>   
 
     </main>
-    <footer class="content-footer">
+    <footer  class="footer-content">
         <p>Say Hi to me on these social networks:</p>
-       <ul class="social">
+       <ul class="socials">
         <li><a href=""><img class="github"  src="github.png" alt="gh"></a></li>
          <li><a href=""><img class="instagram"  src="instagram.png" alt="insta"></a></li>
         <li><a href="/"><img class="facebook"  src="facebook.png" alt="fb"></a></li>
         </ul> 
-        <h1 class="copyright">Copyright &copy; SSRDS Bank</h1>
+        <h1 class="footer-bottom">Copyright &copy; SSRDS Bank</h1>
     </footer>
     <script src="js/accountSummary.js"></script>
 </body>
