@@ -1,0 +1,42 @@
+
+.navTab {
+    overflow: hidden;
+    border: 1px solid lightskyblue;
+    background-color: lightblue;
+  }
+    .type {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid lightskyblue;
+        border-top: none;
+      }
+      .navTab button:hover {
+        background-color: lightskyblue;
+      }
+      
+      .navTab button.active {
+        background-color: lightskyblue;
+      }
+  .navTab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+
+  .transactionHistory{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+     justify-content: space-between;
+  }
+  .plus{
+    color: green;
+  }
+  .minus{
+    color: red;
+  }
