@@ -6,26 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SSRDS Bank</title>
-
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <main>
         <!--Bank name and logo-->
-        <div>
+        <div class="logo">
             <h1>
-                <a class="imgLogo"><img src="img/logo.png"></a>
+                <a class="imgLogo"><img src="img/logo.png" width="200px" height="200px"></a>
                 SSRDS Bank
             </h1>
         </div>
         <!--Welcome messsage according to time-->
-        <div>
+        <div class="welcome">
             <hr>
             <h3 id="wlcmMsg"></h3>
             <hr>
         </div>
-        <div>
+        <div class="login-box">
             <form action="accountSummary.html" onsubmit="return formValidation()" method="GET" id="loginForm">
+                <h2>Log in</h2>
                 <p id="errorMsg"></p>
                 <label for="username" class="loginLabel">Username</label>
                 <br>
@@ -39,10 +40,10 @@
             </form>
         </div>
     </main>
-
-    <footer class="content-footer">
+<br>
+    <footer class="footer-content">
         <p>Follow SSRDS on social media:</p>
-        <ul class="social">
+        <ul class="socials">
             <li>
                 <a href="https://github.com/shivam1709"><img class="github" src="github.png" alt="gh"></a>
             </li>
@@ -53,9 +54,9 @@
                 <a href="https://www.facebook.com/shivamhingu/"><img class="facebook" src="facebook.png" alt="fb"></a>
             </li>
         </ul>
-        <h1 class="copyright">Copyright &copy; Shivam Hingu</h1>
+        <h1 class="footer-bottom">Copyright &copy; Shivam Hingu</h1>
     </footer>
-    <script src="./js/login.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

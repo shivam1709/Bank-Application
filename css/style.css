@@ -1,0 +1,164 @@
+body {
+    background-color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+ .imgLogo{
+  display: block;
+  margin-left: 0px;
+  margin-right: 0px;
+  align-items: center;
+  width: 20px;
+ }
+  .logo h1 {
+
+    text-align: center;
+    color: rgb(223, 73, 73);
+   
+  }
+  .welcome h3{
+    font-size: x-large;
+    text-align: center;
+
+  }
+  .login-box{
+    width: 360px;
+    height:290px;
+    margin: auto;
+    padding: auto;
+    border-radius: 4px;
+    background-color:#F9A620;
+
+  }
+
+
+  form{
+    width: 280px;
+    margin: 20px;
+    padding: 2%;
+
+  }
+  form h2{
+    text-align: center;
+  }
+  loginLabel{
+    
+    width: 100%;
+    display:flex;
+    margin-top: 20px;
+    font-size: 18px;
+    
+  }
+  form input{
+    width:100%;
+    margin: 10px;
+    padding:7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 7px;
+    outline:none ;
+
+  }
+  input[type="submit"]{
+    width:300px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    background-color:#548C2F;
+    color: white;
+    font-size: 20px;
+  }
+
+  .navTab {
+    overflow: hidden;
+    border: 1px solid lightskyblue;
+    background-color: lightblue;
+  }
+    .type {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid lightskyblue;
+        border-top: none;
+      }
+      .navTab button:hover {
+        background-color: lightskyblue;
+      }
+      
+      .navTab button.active {
+        background-color: lightskyblue;
+      }
+  .navTab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+
+  .transactionHistory{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+     justify-content: space-between;
+  }
+  .plus{
+    color: green;
+  }
+  .minus{
+    color: red;
+  }
+
+  footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #104911;
+    height: 100px;
+    width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    color: #fff;
+  
+  }
+  .footer-content{
+    
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  .socials{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .socials li{
+    margin: 0 10px;
+
+  }
+  .socials a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .socials a img{
+    font-size: 1.1rem;
+    transition: color ,4s ease;
+  }
+
+  .socials a:hover i{
+    color: rgb(175, 6, 6);
+  }
+  .footer-bottom{
+    background: #104911;
+    height: 50px;
+    width: 100vw;
+    
+    text-align: center;
+    font-size: small;
+  }
