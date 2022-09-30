@@ -17,8 +17,8 @@ function formValidation() {
 
     if (document.getElementById("userName").value != "") {
         if (document.getElementById("password").value != "") {
-            if (document.getElementById("userName").value == "User1223") {
-                if (document.getElementById("password").value == "User@1223") {
+            if (document.getElementById("userName").value == "user123") {
+                if (document.getElementById("password").value == "user123") {
                     sessionStorage.setItem("loggedIn", 1);
                     return true;
                 } else {
