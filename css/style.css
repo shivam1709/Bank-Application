@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(242, 181, 181);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .login-box{
+    width: 360px;
+    height:290px;
+    margin: auto;
+    border-radius: 4px;
+    background-color: rgb(249, 250, 250);
+
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(181, 6, 6);
+    margin-left: 20px;
+  }
+
+  form{
+    width: 250;
+    margin-left: 20px;
+
+  }
+  form lable{
+    display:flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  form input{
+    width:100%;
+    padding:7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 7px;
+    outline:none ;
+
+  }
+  input[type="button"]{
+    width:350px;
+    height: 40px;
+    margin-top: 25px;
+    border: none;
+    background-color: rgb(225, 44, 12);
+    color: white;
+    font-size: 20px;
+  }
+
+  footer{
+    background: rgb(118, 116, 116);
+    height: auto;
+    width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 40px;
+    color: #fff;
+  
+  }
+  .footer-content{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  .socials{
+    life-style:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+  }
+  .socials li{
+    margin: 0 10px;
+
+  }
+  .socials a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .socials a i{
+    font-size: 1.1rem;
+    transition: color ,4s ease;
+  }
+
+  .socials a:hover i{
+    color: rgb(175, 6, 6);
+  }
