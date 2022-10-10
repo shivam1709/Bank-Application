@@ -1,2 +1,2 @@
 sessionStorage.clear();
-window.location.replace("login.html");
+window.location.replace("login.php");

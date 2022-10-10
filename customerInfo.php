@@ -12,15 +12,15 @@
     <header class="header">
         <navbar>
         <div class="topnav"><br>
-            <a class="imgLogo" href="accountSummary.html"><img src="img/logo.png"width="150px" height="150px"></a>
+            <a class="imgLogo" href="accountSummary.php"><img src="img/logo.png"width="150px" height="150px"></a>
             <br>
             <a class="nameDiv"> The bank which you can trust </a>
             <br>
             <div class="headerDetails">
-            <a class="" href="accountSummary.html">Account Summary</a>
-            <a  href="customerInfo.html">Customer Information</a>
-            <a  href="interac.html">Interac-e Transfer </a>
-            <a class="logout" href="login.html">Logout </a>
+            <a class="" href="accountSummary.php">Account Summary</a>
+            <a  href="customerInfo.php">Customer Information</a>
+            <a  href="interac.php">Interac-e Transfer </a>
+            <a class="logout" href="login.php">Logout </a>
             </div>
         
           </div>

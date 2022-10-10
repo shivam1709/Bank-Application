@@ -13,17 +13,17 @@
         <div class="topnav">
             <div class="logo">
                 <br>
-                <a class="imgLogo" href="accountSummary.html">
+                <a class="imgLogo" href="accountSummary.php">
                     <img src="img/logo.png" width="150px" height="150px"></a>
                     <br>
             </div>
             <a class="nameDiv"> "The bank which you can trust" </a>
             <br>
             <div class="headerDetails">
-                <a  href="accountSummary.html">Account Summary</a>
-                <a  href="customerInfo.html">Customer Information</a>
-                <a  href="interac.html">Interac-e Transfer </a>
-                <a  href="logout.html">Logout </a>
+                <a  href="accountSummary.php">Account Summary</a>
+                <a  href="customerInfo.php">Customer Information</a>
+                <a  href="interac.php">Interac-e Transfer </a>
+                <a  href="logout.php">Logout </a>
             </div>
             <div class="logoutLink">
                 <p id="user"></p>

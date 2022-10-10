@@ -26,7 +26,7 @@
             <hr>
         </div>
         <div class="login-box">
-            <form action="accountSummary.html" onsubmit="return formValidation()" method="GET" id="loginForm">
+            <form action="accountSummary.php" onsubmit="return formValidation()" method="GET" id="loginForm">
                 <h2>Log in</h2>
                 <p id="errorMsg"></p>
                 <label for="username" class="loginLabel">Username</label>
