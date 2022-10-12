@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SSRDS Bank</title>
+    <title>Signup - SSRDS Bank</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,14 +26,22 @@
             <hr>
         </div>
         <div class="login-box">
-            <form action="accountSummary.php" onsubmit="return formValidation()" method="GET" id="loginForm">
+            <form action="login.php" onsubmit="return formValidation()" method="GET" id="loginForm">
                 <h2>Sign up</h2>
                 <p id="errorMsg"></p>
+                <label for="name" class="loginLabel">Name</label>
+                <br>
+                <input type="text" name="name" id="name" class="name" placeholder="Enter your name">
+                <br>
                 <label for="username" class="loginLabel">Username</label>
                 <br>
-                <input type="text" name="name" id="userName" class="username">
+                <input type="text" name="name" id="userName" class="username" placeholder="Enter your desired username. For eg. user123">
                 <br>
                 <label for="password" class="loginLabel">Password</label>
+                <br>
+                <input type="password" name="password" id="password" class="password">
+                <br>
+                <label for="password" class="loginLabel">Re-enter Password</label>
                 <br>
                 <input type="password" name="password" id="password" class="password">
                 <br>
@@ -60,7 +68,7 @@
         </ul>
             <p class="footer-bottom">Copyright &copy; SSRDS</p>
     </footer>
-    <script src="js/login.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 
 </html>
