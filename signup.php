@@ -27,7 +27,7 @@
         </div>
         <div class="login-box">
             <form action="accountSummary.php" onsubmit="return formValidation()" method="GET" id="loginForm">
-                <h2>Log in</h2>
+                <h2>Sign up</h2>
                 <p id="errorMsg"></p>
                 <label for="username" class="loginLabel">Username</label>
                 <br>
@@ -41,7 +41,7 @@
             </form>
         </div>
         <div>
-           <a href="signup.php">Don't have an account! Sign-up here</a> 
+           <a href="login.php">Already have an account! Log-in here</a> 
         </div>
     </main>
 <br>
