@@ -10,6 +10,67 @@
 </head>
 
 <body>
+<?php
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+ $dbname = "dbssrdsbank";
+
+ // Create connection
+ $conn = new mysqli($servername, $username, $password, $dbname);
+
+ // Check connection
+ if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+ }
+ $canInserted = "";
+ $sql = "SELECT EmailID FROM user";
+ $result =  $conn->query($sql);
+ if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+
+        //checking if user already exists or not
+        if(isset($_POST["email"])){
+            if($row["EmailID"] == $_POST["email"]){
+                $canInserted = "false";
+                break;
+            }
+            else{
+                $canInserted = "true";
+            }
+        }
+        
+    }
+  } else {
+    echo "0 results";
+  }
+ if($canInserted=="true"){
+    //insert
+    $stmt = $conn->prepare("INSERT INTO `user` SET Name = ?, UserName = ?, EmailID = ?, Password = ?");
+    $stmt->bind_param("ssss",$name, $userName, $email, $password);
+    if(isset($_POST["name"])){
+    $name = $_POST["name"];
+    }
+
+    if(isset($_POST["userName"])){
+    $userName = $_POST["userName"];
+    }
+
+    if(isset($_POST["email"])){
+    $email = $_POST["email"];
+    }
+    if(isset($_POST["password"])){
+    $password = $_POST["password"];
+    }
+    $stmt->execute();
+ }
+ else if($canInserted=="false"){
+    header("Location:signup.php?message=user already exists");
+ }
+
+ 
+?>
     <main>
         <!--Bank name and logo-->
         <div class="logo">

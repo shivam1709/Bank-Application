@@ -6,10 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup - SSRDS Bank</title>
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<?php
+function connectToDB(){
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        return false;
+    }
+    return true;   
+}
+?>
     <main>
         <!--Bank name and logo-->
         <div class="logo">
@@ -26,7 +43,10 @@
             <hr>
         </div>
         <div class="login-box">
-            <form action="login.php" onsubmit="return formValidation()" method="GET" id="loginForm">
+            <form action="login.php" method="POST" id="loginForm">
+                <p id="errorMsg"><?if(!empty($_GET['message'])) {
+                    $message = $_GET['message'];
+                    } php echo $message ?></p>
                 <h2>Sign up</h2>
                 <p id="errorMsg"></p>
                 <label for="name" class="loginLabel">Name</label>
@@ -35,7 +55,11 @@
                 <br>
                 <label for="username" class="loginLabel">Username</label>
                 <br>
-                <input type="text" name="name" id="userName" class="username" placeholder="Enter your desired username. For eg. user123">
+                <input type="text" name="userName" id="userName" class="username" placeholder="Enter your desired username. For eg. user123">
+                <br>
+                <label for="email" class="loginLabel">EmailID</label>
+                <br>
+                <input type="text" name="email" id="email" class="email" placeholder="Enter your email. For eg. user123@abc.com">
                 <br>
                 <label for="password" class="loginLabel">Password</label>
                 <br>
@@ -43,7 +67,7 @@
                 <br>
                 <label for="password" class="loginLabel">Re-enter Password</label>
                 <br>
-                <input type="password" name="password" id="password" class="password">
+                <input type="password" name="re-password" id="re-password" class="re-password">
                 <br>
                 <input type="submit" value="Submit" class="loginSubmit">
             </form>
