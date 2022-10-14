@@ -14,4 +14,5 @@ function moneyValidation() {
     return false;
   }
 }
+
 //document.getElementById('textbox_id').value
