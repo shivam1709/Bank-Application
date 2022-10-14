@@ -185,3 +185,8 @@ $result1 =  $conn->query($sql1);
     <script src="js/accountSummary.js"></script>
 </body>
 </html>
+<?php
+$sql->close();
+$sql1->close();
+$conn->close();
+?>
