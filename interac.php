@@ -60,7 +60,7 @@ $conn->close();
       </div>
       <div class="interact">
 
-      <form action="/action_page.php">
+      <form action="interac.php" onsubmit="return formValidation()">
         <label for="pname">Pay name:</label><br />
         <input type="text" id="pname" name="fname" value="" /><br />
         <label for="email">Enter your email:</label><br />
