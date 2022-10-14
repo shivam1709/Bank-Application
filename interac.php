@@ -3,15 +3,27 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "dbssrdsbank";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
-
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
+
+$sql = "SELECT Name FROM user WHERE EmailID='shivam@gmail.com'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    $name =   $row["Name"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +53,7 @@ echo "Connected successfully";
     </header>
     <main>
       <!-- DO EVERYTHING HERE -->
-      <h2 id="user"></h2>
+      <h2 ><?php echo $name ?></h2>
       <div class="accountAmount">
         <h1>Checking Account</h1>
         <h3>$5000</h3>
