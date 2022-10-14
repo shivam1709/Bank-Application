@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -24,14 +25,7 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
-$sql = "INSERT INTO tansaction (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
 
 $conn->close();
 ?>
@@ -66,11 +60,12 @@ $conn->close();
       <h2 ><?php echo $name ?></h2>
       <div class="accountAmount">
         <h1>Checking Account</h1>
-        <h3>$5000</h3>
+        <h3><?php echo $_SESSION["totalChequingAmount"]?></h3>
+
       </div>
       <div class="interact">
 
-      <form action="interac.php" onsubmit="return formValidation()">
+      <form action="interac.php" onsubmit="return formValidation()" method="get">
         <label for="pname">Pay name:</label><br />
         <input type="text" id="pname" name="fname" value="" /><br />
         <label for="email">Enter your email:</label><br />

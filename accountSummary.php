@@ -89,7 +89,10 @@ $result =  $conn->query($sql);
                     <h1>Account Balance</h1>
                 </div>
                 <div>
-                    <h3><?php echo(array_sum($plusAmount)-array_sum($minusAmount));?></h3>
+                    <h3><?php echo(array_sum($plusAmount)-array_sum($minusAmount));
+                    $totalChequingAmount = array_sum($plusAmount)-array_sum($minusAmount);
+                    $_SESSION["totalChequingAmount"] = $totalChequingAmount;
+                    ?></h3>
                 </div>
              </div>
             
