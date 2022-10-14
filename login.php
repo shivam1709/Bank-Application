@@ -1,3 +1,59 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: accountSummary.php");
+    exit;
+}
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "dbssrdsbank";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+$emailID="";
+if(isset($_POST["email"])){
+    $emailID = $_POST["email"];
+}
+$pass="";
+if(isset($_POST["password"])){
+    $pass = $_POST["password"];
+}
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $sql = "SELECT * FROM user WHERE EmailID = '$emailID'";
+    $result1 =  $conn->query($sql);
+    if ($result1->num_rows === 1) {
+       while($row = $result1->fetch_assoc()) {
+            if($row["Password"]==$pass){
+                $_SESSION["loggedin"] = true;
+                $_SESSION["email"] = $row["EmailID"];
+                $_SESSION["username"] = $row["Name"]; 
+    
+                // Redirect user to welcome page
+                header("location: accountSummary.php");
+            }
+            else{
+                echo "Invalid email or password";
+            }
+        }
+           
+       
+    } else {
+       echo"Please,Try again!";
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,12 +82,16 @@
             <hr>
         </div>
         <div class="login-box">
-            <form action="accountSummary.php" onsubmit="return formValidation()" method="GET" id="loginForm">
+            <form action="<?php $_SERVER["PHP_SELF"]; ?>" onsubmit="return formValidation()" method="POST" id="loginForm">
                 <h2>Log in</h2>
-                <p id="errorMsg"></p>
-                <label for="username" class="loginLabel">Username</label>
+                <p id="errorMsg"><?php
+                if(isset($_GET["message"])){
+                    echo $_GET["message"];
+                }
+                ?></p>
+                <label for="email" class="loginLabel">Email</label>
                 <br>
-                <input type="text" name="name" id="userName" class="username">
+                <input type="text" name="email" id="email" class="email">
                 <br>
                 <label for="password" class="loginLabel">Password</label>
                 <br>
@@ -39,6 +99,9 @@
                 <br>
                 <input type="submit" value="Submit" class="loginSubmit">
             </form>
+        </div>
+        <div>
+           <a href="signup.php">Don't have an account! Sign-up here</a> 
         </div>
     </main>
 <br>
@@ -59,5 +122,10 @@
     </footer>
     <script src="js/login.js"></script>
 </body>
+<?php
+$stmt->close();
+$sql->close();
+$conn->close();
 
+?>
 </html>
