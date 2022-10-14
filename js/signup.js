@@ -2,7 +2,7 @@
 
 const date = new Date();
 const wlcmMsg =
-    " Please, enter your username and password to continue with banking";
+    " Please, create your account to continue";
 
 if (date.getHours() > 4 && date.getHours() <= 12) {
     document.getElementById("wlcmMsg").innerHTML = "Good Morning!" + wlcmMsg;
