@@ -1,3 +1,76 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbName = "dbssrdsbank";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbName);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  echo "Connected successfully";
+
+  $getUserDetail = "SELECT Name FROM user WHERE EmailID='shivam@gmail.com'";
+  $result = $conn->query($getUserDetail);
+
+    if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    $name =  "Hey". " " . $row["Name"];"<br>";
+  }
+} else {
+  echo "0 results";
+}
+
+$getAccountDetails =
+ "SELECT * FROM transactions 
+ WHERE EmailID='user@gmail.com'";
+  $result = $conn->query($getAccountDetails);
+
+    if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    $accountType =   $row["AccountType"];"<br>";
+    $amount = $row["Amount"];
+    $sender = $row["Sender"];
+    $receiver =  $row["Receiver"];
+    $date =  $row["Date"];
+    if($accountType == "chequing"){
+        if($sender == null){
+            $chequing = $receiver;
+            $chequingAmount = $amount;
+            
+        }
+        else{
+            $chequing = $sender;
+        }
+        $chequingAmount = $amount;
+
+    }
+    else{
+        if($sender == null){
+            $saving = $receiver;
+        }
+        else{
+            $saving = $sender;
+        }
+        $saving = $sender;
+        if($accountType == "saving"){
+            
+            $savingAmount = $amount;
+        }
+    }
+}
+} else {
+  echo "0 results";
+}
+$conn->close();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +99,7 @@
                 <a  href="logout.php">Logout </a>
             </div>
             <div class="logoutLink">
-                <p id="user"></p>
-               
+                <p><?php echo $name ?></p>  
             </div>
         </div>
     </header>
@@ -46,36 +118,16 @@
                 </div>
              </div>
             
-            
             <div class="brb">
                 <div class="transactionHistory">
-                    <p>Grocery</p>
-                    <p class="minus"> $100</p>
+                    <p><?php echo $chequing ?></p>
+                    <p class="plus"> <?php echo $chequingAmount?></p>
                 </div>
                 <div class="transactionHistory">
-                    <p>Income</p>
-                    <p class="plus"> $2500</p>
+                    <p><?php echo $chequing ?></p>
+                    <p class="plus"> <?php echo $chequingAmount?></p>
                 </div>
-                <div class="transactionHistory">
-                    <p>Movie</p>
-                    <p class="minus"> $50</p>
-                </div>
-                <div class="transactionHistory">
-                    <p>Outside Food</p>
-                    <p class="minus"> $200</p>
-                </div>
-                <div class="transactionHistory">
-                    <p>Rent</p>
-                    <p class="minus"> $700</p>
-                </div>
-                <div class="transactionHistory">
-                    <p>Phone Bill</p>
-                    <p class="minus"> $130</p>
-                </div>
-                <div class="transactionHistory">
-                    <p>Utility</p>
-                    <p class="minus"> $50</p>
-                </div>
+                
             </div>
             
 
@@ -87,21 +139,14 @@
             </div>
             <div class="brb">
             <div class="transactionHistory">
-                <p>Investment</p>
-                <p class="minus"> $200</p>
+                <p><?php echo $saving ?></p>
+                <p class="minus"><?php echo $savingAmount ?></p>
             </div>
             <div class="transactionHistory">
                 <p>Investment</p>
                 <p class="minus"> $700</p>
             </div>
-            <div class="transactionHistory">
-                <p>Investment</p>
-                <p class="minus"> $130</p>
-            </div>
-            <div class="transactionHistory">
-                <p>Investment</p>
-                <p class="minus"> $50</p>
-            </div>
+           
             </div>
         </div>   
 
