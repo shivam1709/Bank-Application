@@ -12,6 +12,7 @@ if (date.getHours() > 4 && date.getHours() <= 12) {
     document.getElementById("wlcmMsg").innerHTML = "Good Evening!" + wlcmMsg;
 }
 
+
 //javascript for login
 function formValidation() {
     if (document.getElementById("userName").value != "") {

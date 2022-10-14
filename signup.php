@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 <?php
 function connectToDB(){
     $servername = "localhost";
@@ -43,12 +44,13 @@ function connectToDB(){
             <hr>
         </div>
         <div class="login-box">
-            <form action="login.php" method="POST" id="loginForm">
-                <p id="errorMsg"><?if(!empty($_GET['message'])) {
-                    $message = $_GET['message'];
-                    } php echo $message ?></p>
+            <form action="login.php" onsubmit="return signUpFormValidation()" method="POST" id="signupForm">
                 <h2>Sign up</h2>
-                <p id="errorMsg"></p>
+                <p id="errorMsg"><?php
+                if(isset($_GET["message"])){
+                    echo $_GET["message"];
+                }
+                ?></p>
                 <label for="name" class="loginLabel">Name</label>
                 <br>
                 <input type="text" name="name" id="name" class="name" placeholder="Enter your name">

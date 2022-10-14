@@ -64,6 +64,7 @@
     $password = $_POST["password"];
     }
     $stmt->execute();
+    echo "<script>alert('Your account created successfully');</script>";
  }
  else if($canInserted=="false"){
     header("Location:signup.php?message=user already exists");
