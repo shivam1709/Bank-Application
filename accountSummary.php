@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$dbName = "dbssrds.sql";
+$dbName = "dbssrdsbank";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
