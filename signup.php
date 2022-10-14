@@ -93,7 +93,8 @@ if($canInserted=="false"){
             <h1>
                 <a class="imgLogo"><img src="img/logo.png" width="150px" height="150px"></a>
                 <br>
-                SSRDS Bank
+                <h2>SSRDS Bank</h2>
+                
             </h1>
         </div>
         <!--Welcome messsage according to time-->
@@ -102,7 +103,7 @@ if($canInserted=="false"){
             <h3 id="wlcmMsg"></h3>
             <hr>
         </div>
-        <div class="login-box">
+        <div class="login-boxx">
             <form action="<?php $_SERVER["PHP_SELF"]; ?>" onsubmit="return signUpFormValidation()" method="POST" id="signupForm">
                 <h2>Sign up</h2>
                 <p id="errorMsg"><?php
@@ -134,11 +135,8 @@ if($canInserted=="false"){
             </form>
         </div>
         <div>
-           <a href="login.php">Already have an account! Log-in here</a> 
-        </div>
-    </main>
-<br>
-    <footer class="footer-content">
+           <a class="Login" href="login.php">Already have an account! Log-in here</a>
+           <footer class="footer-contentss">
         <p>Follow SSRDS on social media:</p>
         <ul class="socials">
             <li>
@@ -153,6 +151,10 @@ if($canInserted=="false"){
         </ul>
             <p class="footer-bottom">Copyright &copy; SSRDS</p>
     </footer>
+        </div>
+    </main>
+<br>
+    
     <script src="js/signup.js"></script>
 </body>
 
