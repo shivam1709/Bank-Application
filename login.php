@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            
        
     } else {
-       echo"Please,Try again!";
+      echo "Please,Try again!" ;
     }
 
 }
@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <h1>
                 <a class="imgLogo"><img src="img/logo.png" width="150px" height="150px"></a>
                 <br>
-                SSRDS Bank
+                <h2>SSRDS Bank</h2>
             </h1>
         </div>
         <!--Welcome messsage according to time-->
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </form>
         </div>
         <div>
-           <a href="signup.php">Don't have an account! Sign-up here</a> 
+           <a class="Signup " href="signup.php">Don't have an account! Sign-up here</a> 
         </div>
     </main>
 <br>
