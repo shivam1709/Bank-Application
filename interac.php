@@ -23,6 +23,16 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
+
+$sql = "INSERT INTO tansaction (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -70,7 +80,7 @@ $conn->close();
           type="tel"
           id="phone"
           name="phone"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          pattern="[0-9]{3}[0-9]{2}[0-9]{4}"
         />
         <br />
         <label for="quetion">Interec Quetion:</label><br />
@@ -80,7 +90,7 @@ $conn->close();
         <label for="amount">Amount:</label><br />
         <input type="number" id="amount" name="" value="" /><br />
       
-      <button id="Validation" onclick="return moneyValidation()">
+      <button id="Validation" >
         Send Money
       </button>
       </form>

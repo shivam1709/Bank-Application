@@ -15,31 +15,26 @@ function moneyValidation() {
   }
 }
 function formValidation() {
-  if (document.getElementById("pname").value != "") {
-    if (document.getElementById("email").value != "") {
-      if (document.getElementById("userName").value == "user123") {
-        if (document.getElementById("password").value == "user123") {
-          sessionStorage.setItem("loggedIn", 1);
-          return true;
-        } else {
-          document.getElementById("errorMsg").innerHTML =
-            "Failed attempt! Incorrect password!";
-          return false;
-        }
-      } else {
-        document.getElementById("errorMsg").innerHTML =
-          "Failed attempt! Incorrect username!";
-        return false;
-      }
-    } else {
-      document.getElementById("errorMsg").innerHTML =
-        "Failed attempt! Password cannot be empty!";
-      return false;
-    }
-  } else {
-    document.getElementById("errorMsg").innerHTML =
-      "Failed attempt! Username cannot be empty!";
-    return false;
+  if (document.getElementById("pname").value == "") {
+    alert("Field cannot be empty");
+  } 
+  else if(document.getElementById("email").value == ""){
+    alert("Field cannot be empty");
+  }
+  else if(document.getElementById("phone").value == ""){
+    alert("Field cannot be empty");
+  }
+  else if(document.getElementById("quetion").value == ""){
+    alert("Field cannot be empty");
+  }
+  else if(document.getElementById("answer").value == ""){
+    alert("Field cannot be empty");
+  }
+  else if(document.getElementById("amount").value == ""){
+    alert("Field cannot be empty");
+  }
+  else{
+    moneyValidation();
   }
 }
 
