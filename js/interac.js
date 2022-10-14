@@ -1,8 +1,17 @@
-function Money() {
-  var a = document.getElementById(amount).value;
-  if (a > 5000) {
-    document.getElementById("answer").innerHTML = "Correct!";
+if (sessionStorage.getItem("loggedIn") == 1) {
+  sessionStorage.setItem("user", "user123");
+  document.getElementById("user").innerHTML = sessionStorage.getItem("user");
+} else {
+  window.location.replace("login.php");
+}
+function moneyValidation() {
+  //var a = document.getElementById("amount").value;
+  if (document.getElementById("amount").value < 5000) {
+    alert("Money sent");
+    return true;
   } else {
-    document.getElementById("answer").innerHTML = "Copp!";
+    alert("Not enough money");
+    return false;
   }
 }
+//document.getElementById('textbox_id').value
