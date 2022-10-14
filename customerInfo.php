@@ -1,3 +1,15 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,10 +44,10 @@
             <br>
             <img src="img/Devanshi_Avatar.jpg" alt="User_Profile" width="150" height="150"></div><br>
             <div class="infoClass">
-                <h2 id="user">Jakcs Sparrow - Sumdri Lutera</h2><hr>
+                <h2 id="user"><?php echo($_SESSION["username"]);?></h2><hr>
                 <h3>123, abc circle, kitchner, ON - NE3 E4H</h3>
                 <h3>+1 579-286-7865</h3>
-                <h3>abc@gmail.com</h3>
+                <h3><?php echo($_SESSION["email"]);?></h3>
             </div>
         </div>
     </main>
